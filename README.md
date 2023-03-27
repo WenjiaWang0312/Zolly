@@ -2,6 +2,6 @@
 
 [paper link](https://arxiv.org/abs/2303.13796)
 
-<img src="assets/teaser.png" width="1431" height="322" alt="Google logo">
+![teaser](assets/teaser.png)
 
 The code and datasets will be released soon.
