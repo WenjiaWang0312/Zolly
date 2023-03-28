@@ -126,7 +126,7 @@ test/
 *.mp4
 *.png
 *.gif
-*.jpg
+#*.jpg
 *.obj
 *.ply
 !demo/resources/*
