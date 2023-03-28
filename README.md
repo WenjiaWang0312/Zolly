@@ -2,6 +2,8 @@
 
 The first work aims to solve 3D Human Mesh Reconstruction task in perspective-distorted images. 
 ![teaser](assets/teaser.png)
+![teaser](assets/demo_web.jpg)
+
 ## News:
 * 2023.Mar.27, [arxiv link](https://arxiv.org/abs/2303.13796) is released.
 
@@ -29,6 +31,7 @@ The first work aims to solve 3D Human Mesh Reconstruction task in perspective-di
 | Zolly-P(R50) |          |       |     |
 | Zolly(R50)   |          |       |     |
 | Zolly(H48)   |          |       |     |
+![demo_3dpw](assets/demo_3dpw.jpg)
 
 - H36M
 
@@ -37,6 +40,7 @@ The first work aims to solve 3D Human Mesh Reconstruction task in perspective-di
 | Zolly-P(R50) |          |       |
 | Zolly(R50)   |          |       |
 | Zolly(H48)   |          |       |
+![demo_h36m](assets/demo_h36m.jpg)
 
 - PDHuman (full)
 
@@ -46,6 +50,7 @@ The first work aims to solve 3D Human Mesh Reconstruction task in perspective-di
 | Zolly(R50)   |          |       |     |
 | Zolly(H48)   |          |       |     |
 
+
 - SPEC-MTP (full)
 
 | Config       | PA-MPJPE | MPJPE | PVE |
@@ -53,3 +58,4 @@ The first work aims to solve 3D Human Mesh Reconstruction task in perspective-di
 | Zolly-P(R50) |          |       |     |
 | Zolly(R50)   |          |       |     |
 | Zolly(H48)   |          |       |     |
+![demo_specmtp](assets/demo_specmtp.jpg)
