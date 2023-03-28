@@ -2,7 +2,7 @@
 
 ## The first work aims to solve 3D Human Mesh Reconstruction task in **perspective-distorted images**. 
 ![teaser](assets/teaser.png)
-![sota](assets/demo_sota.jpg)
+<!-- ![sota](assets/demo_sota.jpg) -->
 
 
 ## News:
@@ -43,7 +43,7 @@
 | Zolly(R50)   |          |       |     |
 | Zolly(H48)   |          |       |     |
 
-![demo_3dpw](assets/demo_3dpw.jpg)
+<!-- ![demo_3dpw](assets/demo_3dpw.jpg) -->
 
 - H36M
 
@@ -53,7 +53,7 @@
 | Zolly(R50)   |          |       |
 | Zolly(H48)   |          |       |
 
-![demo_h36m](assets/demo_h36m.jpg)
+<!-- ![demo_h36m](assets/demo_h36m.jpg) -->
 
 - PDHuman (full)
 
@@ -72,8 +72,8 @@
 | Zolly(R50)   |          |       |     |
 | Zolly(H48)   |          |       |     |
 
-![demo_specmtp](assets/demo_specmtp.jpg)
+<!-- ![demo_specmtp](assets/demo_specmtp.jpg) -->
 
-- Web
+<!-- - Web -->
 
-![teaser](assets/demo_web.jpg)
+<!-- ![teaser](assets/demo_web.jpg) -->
