@@ -31,6 +31,7 @@ The first work aims to solve 3D Human Mesh Reconstruction task in perspective-di
 | Zolly-P(R50) |          |       |     |
 | Zolly(R50)   |          |       |     |
 | Zolly(H48)   |          |       |     |
+
 ![demo_3dpw](assets/demo_3dpw.jpg)
 
 - H36M
@@ -40,6 +41,7 @@ The first work aims to solve 3D Human Mesh Reconstruction task in perspective-di
 | Zolly-P(R50) |          |       |
 | Zolly(R50)   |          |       |
 | Zolly(H48)   |          |       |
+
 ![demo_h36m](assets/demo_h36m.jpg)
 
 - PDHuman (full)
@@ -58,4 +60,5 @@ The first work aims to solve 3D Human Mesh Reconstruction task in perspective-di
 | Zolly-P(R50) |          |       |     |
 | Zolly(R50)   |          |       |     |
 | Zolly(H48)   |          |       |     |
+
 ![demo_specmtp](assets/demo_specmtp.jpg)
