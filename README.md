@@ -1,8 +1,9 @@
 # Zolly: Zoom Focal Length Correctly for Perspective-Distorted Human Mesh Reconstruction
 
-The first work aims to solve 3D Human Mesh Reconstruction task in perspective-distorted images. 
+## The first work aims to solve 3D Human Mesh Reconstruction task in **perspective-distorted images**. 
 ![teaser](assets/teaser.png)
-![teaser](assets/demo_web.jpg)
+![sota](assets/demo_sota.jpg)
+
 
 ## News:
 * 2023.Mar.27, [arxiv link](https://arxiv.org/abs/2303.13796) is released.
@@ -13,14 +14,24 @@ The first work aims to solve 3D Human Mesh Reconstruction task in perspective-di
 
 ## Run the code
 ### Environments
+- Requirements
+    - Pytorch3D
+    - MMHuman3D
 ### Dataset Preparation
-
+- Preprocessed npzs.
+(Besides our proposed datasets, we will also provide Human3.6M and 3DPW annotations with ground-truth camera parameters and translations.)
+- Images.
+    - HuMMan
+    - SPEC-MTP
+    - PDHuman
 ### Train
 
 ### Test & Demo
 
+### Add Your Algorithm
 
-### Results
+
+### Results of Zolly
 ---
 
 
@@ -62,3 +73,7 @@ The first work aims to solve 3D Human Mesh Reconstruction task in perspective-di
 | Zolly(H48)   |          |       |     |
 
 ![demo_specmtp](assets/demo_specmtp.jpg)
+
+- Web
+
+![teaser](assets/demo_web.jpg)
