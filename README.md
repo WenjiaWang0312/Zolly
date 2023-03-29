@@ -37,40 +37,26 @@
 
 - 3DPW
 
-| Config       | PA-MPJPE | MPJPE | PVE |
-| ------------ | -------- | ----- | --- |
-| Zolly-P(R50) |          |       |     |
-| Zolly(R50)   |          |       |     |
-| Zolly(H48)   |          |       |     |
-
-<!-- ![demo_3dpw](assets/demo_3dpw.jpg) -->
+| Config       | PA-MPJPE | MPJPE |  PVE  |
+| ------------ | -------- | ----- |  ---  |
+| Zolly(R50)   |   44.1   | 72.5  |  84.3 |
+| Zolly(H48)   |   **39.8**   | **65.0**  |  **76.3** |
 
 - H36M
 
 | Config       | PA-MPJPE | MPJPE |
 | ------------ | -------- | ----- |
-| Zolly-P(R50) |          |       |
-| Zolly(R50)   |          |       |
-| Zolly(H48)   |          |       |
-
-<!-- ![demo_h36m](assets/demo_h36m.jpg) -->
-
-- PDHuman (full)
-
-| Config       | PA-MPJPE | MPJPE | PVE |
-| ------------ | -------- | ----- | --- |
-| Zolly-P(R50) |          |       |     |
-| Zolly(R50)   |          |       |     |
-| Zolly(H48)   |          |       |     |
+| Zolly(R50)   |   34.2   |  52.7 |
+| Zolly(H48)   |   **32.3**   |  **49.4** |
 
 
 - SPEC-MTP (full)
 
 | Config       | PA-MPJPE | MPJPE | PVE |
 | ------------ | -------- | ----- | --- |
-| Zolly-P(R50) |          |       |     |
-| Zolly(R50)   |          |       |     |
-| Zolly(H48)   |          |       |     |
+| [SPEC(R50)](https://github.com/mkocabas/SPEC)     |    71.8   |   116.1  | 136.4|
+| Zolly(R50)   |      66.9    | 109.6      | 124.4    |
+| Zolly(H48)   |  **65.8**     | **108.2**  | **121.9** |
 
 ## Quality Results (For more please refer to our paper.)
 ![sota](assets/demo_sota.jpg)
