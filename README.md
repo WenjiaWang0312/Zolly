@@ -2,7 +2,7 @@
 
 ## The first work aims to solve 3D Human Mesh Reconstruction task in **perspective-distorted images**. 
 ![teaser](assets/teaser.png)
-<!-- ![sota](assets/demo_sota.jpg) -->
+
 
 
 ## News:
@@ -18,9 +18,9 @@
     - Pytorch3D
     - MMHuman3D
 ### Dataset Preparation
-- Preprocessed npzs.
+- Preprocessed npzs. (Will be released soon)
 (Besides our proposed datasets, we will also provide Human3.6M and 3DPW annotations with ground-truth camera parameters and translations.)
-- Images.
+- Images. (Will be released soon)
     - HuMMan
     - SPEC-MTP
     - PDHuman
@@ -72,8 +72,5 @@
 | Zolly(R50)   |          |       |     |
 | Zolly(H48)   |          |       |     |
 
-<!-- ![demo_specmtp](assets/demo_specmtp.jpg) -->
-
-<!-- - Web -->
-
-<!-- ![teaser](assets/demo_web.jpg) -->
+## Quality Results (For more please refer to our paper.)
+![sota](assets/demo_sota.jpg)
