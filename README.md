@@ -17,13 +17,20 @@
 - Requirements
     - Pytorch3D
     - MMHuman3D
-### Dataset Preparation
-- Preprocessed npzs. (Will be released soon)
-(Besides our proposed datasets, we will also provide Human3.6M and 3DPW annotations with ground-truth camera parameters and translations.)
+
+### Dataset Preparation (Will be released soon)
+- Preprocessed npzs, all has ground-truth focal length, translation and smpl parameters.
+    - HuMMan (train, test_p1, test_p2, test_p3)
+    - SPEC-MTP (test_p1, test_p2, test_p3)
+    - PDHuman (train, test_p1, test_p2, test_p3, test_p4, test_p5)
+    - 3DPW (train(has optimized neutral betas), test_p1, test_p2, test_p3)
+    - Human3.6M (train, val_p2)
+
 - Images. (Will be released soon)
     - HuMMan
     - SPEC-MTP
     - PDHuman
+
 ### Train
 
 ### Test & Demo
