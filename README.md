@@ -10,6 +10,7 @@ The first work aims to solve 3D Human Mesh Reconstruction task in **perspective-
 
 
 # 🗓️ News:
+🎆 2023.Jul.14, Zolly is accepted to ICCV2023, codes and data will come soon.
 🎆 2023.Mar.27, [arxiv link](https://arxiv.org/abs/2303.13796) is released.
 
 
@@ -51,8 +52,11 @@ If you find this project useful in your research, please consider cite:
   year={2023}
 }
 ```
-Feel free to contact me for other questions or cooperation: 📧 wwj2022@connect.hku.hk
+# 📧 Contact
 
+Feel free to contact me for other questions or cooperation: wwj2022@connect.hku.hk
+
+<!-- icons taken from https://gist.github.com/rxaviers/7360908 -->
 <!-- ## Results of Zolly
 ---
 
