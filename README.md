@@ -10,6 +10,9 @@ The first work aims to solve 3D Human Mesh Reconstruction task in **perspective-
 
 
 # 🗓️ News:
+
+🎆 2023.Aug.7, the dataset link is released. It is easy to load the annotations with `np.load(path)`.
+
 🎆 2023.Jul.14, Zolly is accepted to ICCV2023, codes and data will come soon.
 
 🎆 2023.Mar.27, [arxiv link](https://arxiv.org/abs/2303.13796) is released.
@@ -21,18 +24,17 @@ The first work aims to solve 3D Human Mesh Reconstruction task in **perspective-
     - Pytorch3D
     - MMHuman3D
 
-## 💾 Dataset Preparation (Will be released soon)
-- 💿 Preprocessed npzs, all has ground-truth focal length, translation and smpl parameters.
-    - HuMMan (train, test_p1, test_p2, test_p3)
-    - SPEC-MTP (test_p1, test_p2, test_p3)
-    - PDHuman (train, test_p1, test_p2, test_p3, test_p4, test_p5)
-    - 3DPW (train(has optimized neutral betas), test_p1, test_p2, test_p3)
-    - Human3.6M (train, val_p2)
+## 💾 Dataset Preparation
+- 💿 [Preprocessed npzs](), all has ground-truth focal length, translation and smpl parameters.
+    - [HuMMan](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EuXCqmz3v6dFslQGwv9eRyUBywmMDqoUGUuoxOVp1UeDzA) (train, test_p1, test_p2, test_p3
+    - [SPEC-MTP](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/Er8fPdOE5mJNvX0zswUal8IBTq2rYk7lhiZFeCuNFFh-hw) (test_p1, test_p2, test_p3)
+    - [PDHuman](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/Eln52WC8rSJLk8A6hiC9msUBMlTbB4b65OdyXIX4YoBqsQ) (train, test_p1, test_p2, test_p3, test_p4, test_p5)
+    - [3DPW](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/Egf4YuLUKbtOjK6lP3G2X1UB2vEptMR5cJpE_4-1Zq6Qyg) (train(has optimized neutral betas), test_p1, test_p2, test_p3)
 
 - 🌁 Images. (Will be released soon)
-    - HuMMan
-    - SPEC-MTP
-    - PDHuman
+    - [HuMMan](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EhQf5Z37_Y5EoeiEJRL3kEEBM9bjlPo5edJ4djMb8jbatw)
+    - [SPEC-MTP](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EqBRcsqLt0BHjeE254JhFHIBtsfpqDofFaT3QQf5-QWtkQ)
+    - [PDHuman](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjGl9svxV_xHoC0hHlHVpcMB7IZwYbyiFVbS8iRP9cVsIg)
 
 ## 🚅 Train
 
