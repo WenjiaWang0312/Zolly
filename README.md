@@ -11,7 +11,7 @@ The first work aims to solve 3D Human Mesh Reconstruction task in **perspective-
 
 # 🗓️ News:
 
-🎆 2023.Aug.7, the dataset link is released. It is easy to load the annotations with `np.load(path)`.
+🎆 2023.Aug.7, the dataset link is released. It is easy to load the annotations with `np.load(path)`. The training code is coming soon.
 
 🎆 2023.Jul.14, Zolly is accepted to ICCV2023, codes and data will come soon.
 
@@ -25,7 +25,7 @@ The first work aims to solve 3D Human Mesh Reconstruction task in **perspective-
     - MMHuman3D
 
 ## 💾 Dataset Preparation
-- 💿 [Preprocessed npzs](), all has ground-truth focal length, translation and smpl parameters.
+- 💿 Preprocessed npzs, all has ground-truth focal length, translation and smpl parameters.
     - [HuMMan](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EuXCqmz3v6dFslQGwv9eRyUBywmMDqoUGUuoxOVp1UeDzA) (train, test_p1, test_p2, test_p3
     - [SPEC-MTP](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/Er8fPdOE5mJNvX0zswUal8IBTq2rYk7lhiZFeCuNFFh-hw) (test_p1, test_p2, test_p3)
     - [PDHuman](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/Eln52WC8rSJLk8A6hiC9msUBMlTbB4b65OdyXIX4YoBqsQ) (train, test_p1, test_p2, test_p3, test_p4, test_p5)
