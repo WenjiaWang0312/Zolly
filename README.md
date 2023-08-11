@@ -22,22 +22,24 @@ The first work aims to solve 3D Human Mesh Reconstruction task in **perspective-
 ## 🌏 Environments
 - You should install [`MMHuman3D`](https://github.com/open-mmlab/mmhuman3d/blob/main/docs/install.md) firstly.
 
-You can install pytorch3d from file if you find any difficulty. 
+You should install the needed relies as `ffmpeg`, `torch`, `mmcv`, `pytorch3d` following its tutorials.
 
+You can install `pytorch3d` from file if you find any difficulty. 
+E.g. `python3.8 + pytorch-1.13.1 + cuda-11.7 + pytorch3d-0.7.4`
 ```
-wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch3d/linux-64/pytorch3d-0.7.4-py310_cu118_pyt200.tar.bz2;
+wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch3d/linux-64/pytorch3d-0.7.4-py38_cu117_pyt1131.tar.bz2;
 pip install fvcore;
 pip install iopath;
-conda install --use-local pytorch3d-0.7.4-py{38}_cu{117}_pyt{1131}.tar.bz2;
+conda install --use-local pytorch3d-0.7.4-py38_cu117_pyt1131.tar.bz2;
 ```
 
-- It is recommended that you install the stable version of `MMHuman3D`
+- It is recommended that you install the stable version of `MMHuman3D`:
 
 ```
 wget https://github.com/open-mmlab/mmhuman3d/archive/refs/tags/v0.9.0.tar.gz;
 tar -xvf v0.9.0.tar.gz;
 cd mmhuman3d-0.9.0;
-pip insatll -e .
+pip install -e .
 ```
 
 - install this repo
@@ -47,7 +49,7 @@ pip install -e .
 ```
 
 ## 💾 Dataset Preparation
-- 💿 Preprocessed npzs, all has ground-truth focal length, translation and smpl parameters. It is easy to load the annotations with `np.load(path)`. We will release training code as soon as possible.
+- 💿 Preprocessed npzs, all have ground-truth focal length, translation and smpl parameters. It is easy to load the annotations with `np.load(path)`. We will release training code as soon as possible.
     - [HuMMan](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EuXCqmz3v6dFslQGwv9eRyUBywmMDqoUGUuoxOVp1UeDzA) (train, test_p1, test_p2, test_p3
     - [SPEC-MTP](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/Er8fPdOE5mJNvX0zswUal8IBTq2rYk7lhiZFeCuNFFh-hw) (test_p1, test_p2, test_p3)
     - [PDHuman](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/Eln52WC8rSJLk8A6hiC9msUBMlTbB4b65OdyXIX4YoBqsQ) (train, test_p1, test_p2, test_p3, test_p4, test_p5)
