@@ -11,6 +11,8 @@ The first work aims to solve 3D Human Mesh Reconstruction task in **perspective-
 
 # 🗓️ News:
 
+🎆 2023.Aug.12, Zolly is accepted as ICCV2023 oral.
+
 🎆 2023.Aug.7, the dataset link is released. The training code is coming soon.
 
 🎆 2023.Jul.14, Zolly is accepted to ICCV2023, codes and data will come soon.
