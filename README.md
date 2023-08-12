@@ -51,16 +51,20 @@ pip install -e .
 ```
 
 ## 💾 Dataset Preparation
-- 💿 Preprocessed npzs, all have ground-truth focal length, translation and smpl parameters. It is easy to load the annotations with `np.load(path)`. We will release training code as soon as possible.
-    - [HuMMan](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EuXCqmz3v6dFslQGwv9eRyUBywmMDqoUGUuoxOVp1UeDzA) (train, test_p1, test_p2, test_p3
-    - [SPEC-MTP](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/Er8fPdOE5mJNvX0zswUal8IBTq2rYk7lhiZFeCuNFFh-hw) (test_p1, test_p2, test_p3)
-    - [PDHuman](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/Eln52WC8rSJLk8A6hiC9msUBMlTbB4b65OdyXIX4YoBqsQ) (train, test_p1, test_p2, test_p3, test_p4, test_p5)
-    - [3DPW](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/Egf4YuLUKbtOjK6lP3G2X1UB2vEptMR5cJpE_4-1Zq6Qyg) (train(has optimized neutral betas), test_p1, test_p2, test_p3)
+
+You can download the files from [onedrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw).
+
+- 💿 Annotations:
+ all have ground-truth focal length, translation and smpl parameters. It is easy to load the annotations with `np.load(path)`. We will release training code as soon as possible.
+    - HuMMan (train, test_p1, test_p2, test_p3
+    - SPEC-MTP (test_p1, test_p2, test_p3)
+    - PDHuman (train, test_p1, test_p2, test_p3, test_p4, test_p5)
+    - 3DPW (train(has optimized neutral betas), test_p1, test_p2, test_p3)
 
 - 🌁 Images.
-    - [HuMMan](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EhQf5Z37_Y5EoeiEJRL3kEEBM9bjlPo5edJ4djMb8jbatw)
-    - [SPEC-MTP](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EqBRcsqLt0BHjeE254JhFHIBtsfpqDofFaT3QQf5-QWtkQ)
-    - [PDHuman](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjGl9svxV_xHoC0hHlHVpcMB7IZwYbyiFVbS8iRP9cVsIg)
+    - HuMMan
+    - SPEC-MTP
+    - PDHuman
 
 ## 🚅 Train
 
