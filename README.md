@@ -52,16 +52,18 @@ pip install -e .
 
 ## 💾 Dataset Preparation
 
-You can download the files from [onedrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw).
+You can download the files from [onedrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw) here.
 
-- 💿 Annotations:
+This link contains:
+
+- 💿 annotations:
  all have ground-truth focal length, translation and smpl parameters. It is easy to load the annotations with `np.load(path)`. We will release training code as soon as possible.
     - HuMMan (train, test_p1, test_p2, test_p3
     - SPEC-MTP (test_p1, test_p2, test_p3)
     - PDHuman (train, test_p1, test_p2, test_p3, test_p4, test_p5)
     - 3DPW (train(has optimized neutral betas), test_p1, test_p2, test_p3)
 
-- 🌁 Images.
+- 🌁 images.
     - HuMMan
     - SPEC-MTP
     - PDHuman
