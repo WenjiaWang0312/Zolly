@@ -53,39 +53,75 @@ cd Zolly;
 pip install -e .
 ```
 
-## 💾 Dataset Preparation
+## 📁 Required Data and Files
 
 You can download the files from [onedrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw).
 
 This link contains:
 
-- 💿 annotations:
+- 💿 dataset annotations:
  all have ground-truth focal length, translation and smpl parameters.
     - HuMMan (train, test_p1, test_p2, test_p3
     - SPEC-MTP (test_p1, test_p2, test_p3)
     - PDHuman (train, test_p1, test_p2, test_p3, test_p4, test_p5)
     - 3DPW (train(has optimized neutral betas), test_p1, test_p2, test_p3)
 
-- 🌁 images.
+- 🌁 dataset images.
     - HuMMan
     - SPEC-MTP
     - PDHuman
 For other open sourced datasets, please downlad
 
-## 📁 Required files
-
-- pretrained backbone [onedrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw)
+- pretrained backbone
   - `hrnetw48_coco_pose.pth`
   -  `resnet50_coco_pose.pth`
 
-- SMPL skinning weights
-  - Please find in [SMPL official link](https://smpl.is.tue.mpg.de/).
-
-- Others [onedrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw)
+- Others
   - `smpl_uv_decomr.npz`
   - `mesh_downsampling.npz`
   - `J_regressor_h36m.npy`
 
+- SMPL skinning weights
+  - Please find in [SMPL official link](https://smpl.is.tue.mpg.de/).
+  
+- Arrange all the files like this. And change the root in `zolly/configs/base.py`
+```bash
+root
+  ├── body_models
+  │   └── smpl
+  |       ├── J_regressor_extra.npy
+  |       ├── J_regressor_h36m.npy
+  |       ├── mesh_downsampling.npz
+  |       ├── SMPL_FEMALE.pkl
+  |       ├── SMPL_MALE.pkl
+  |       ├── smpl_mean_params.npz
+  |       ├── SMPL_NEUTRAL.pkl
+  |       └── smpl_uv_decomr.npz
+  ├── cache
+  ├── mmhuman_data
+  │   ├── datasets                                                                                
+  |   │   ├── coco                                                                                   
+  |   │   ├── h36m                                              
+  |   │   ├── humman                                            
+  |   │   ├── lspet                                             
+  |   │   ├── mpii                                              
+  |   │   ├── mpi_inf_3dhp                                      
+  |   │   ├── pdhuman                                                                                 
+  |   │   ├── pw3d                                              
+  |   │   └── spec_mtp  
+  │   └── preprocessed_datasets
+  |       ├── humman_test_p1.npz
+  |       ├── humman_train.npz
+  |       ├── pdhuman_test_p1.npz
+  |       ├── pdhuman_train.npz
+  |       ├── pw3d_train.npz
+  |       ├── pw3d_train_transl.npz
+  |       ├── spec_mtp.npz
+  |       └── spec_mtp_p1.npz
+  └── pretrain
+     ├── hrnetw48_coco_pose.pth
+     └── resnet50_coco_pose.pth
+```
 ## 🚅 Train
 ```bash
 sh train_bash.sh zolly/configs/zolly_r50.py $num_gpu$ --work-dir=$your_workdir$
