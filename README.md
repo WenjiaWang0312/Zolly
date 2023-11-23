@@ -59,20 +59,20 @@ You can download the files from [onedrive](https://connecthkuhk-my.sharepoint.co
 
 This link contains:
 
-- 💿 dataset annotations:
+- Dataset annotations:
  all have ground-truth focal length, translation and smpl parameters.
-    - HuMMan (train, test_p1, test_p2, test_p3
-    - SPEC-MTP (test_p1, test_p2, test_p3)
-    - PDHuman (train, test_p1, test_p2, test_p3, test_p4, test_p5)
-    - 3DPW (train(has optimized neutral betas), test_p1, test_p2, test_p3)
+  - HuMMan (train, test_p1, test_p2, test_p3)
+  - SPEC-MTP (test_p1, test_p2, test_p3)
+  - PDHuman (train, test_p1, test_p2, test_p3, test_p4, test_p5)
+  - 3DPW (train(has optimized neutral betas), test_p1, test_p2, test_p3)
 
-- 🌁 dataset images.
-    - HuMMan
-    - SPEC-MTP
-    - PDHuman
-For other open sourced datasets, please downlad
+- Dataset images.
+  - HuMMan
+  - SPEC-MTP
+  - PDHuman
+  - For other open sourced datasets, please downlad from their origin website.
 
-- pretrained backbone
+- Pretrained backbone
   - `hrnetw48_coco_pose.pth`
   -  `resnet50_coco_pose.pth`
 
@@ -84,7 +84,10 @@ For other open sourced datasets, please downlad
 - SMPL skinning weights
   - Please find in [SMPL official link](https://smpl.is.tue.mpg.de/).
   
-- Arrange all the files like this. And change the root in `zolly/configs/base.py`
+## 👇 Arrange the files
+<details>
+<summary>Click here to unfold.</summary>
+
 ```bash
 root
   ├── body_models
@@ -122,6 +125,10 @@ root
      ├── hrnetw48_coco_pose.pth
      └── resnet50_coco_pose.pth
 ```
+</details>
+
+ And change the `root` in `zolly/configs/base.py`
+
 ## 🚅 Train
 ```bash
 sh train_bash.sh zolly/configs/zolly_r50.py $num_gpu$ --work-dir=$your_workdir$
@@ -144,6 +151,7 @@ sh demo_bash.sh zolly/configs/zolly/zolly_r50.py $num_gpu$ --checkpoint=$your_ck
 ## 💻Add Your Own Algorithm
 - Add your own network in `zolly/models/heads`, and add it to `zolly/models/builder.py`.
 - Add your own trainer in `zolly/models/architectures`, and add it to `zolly/models/architectures/builder.py`.
+- Add your own loss function in `zolly/models/losses`, and add it to `zolly/models/losses/builder.py`.
 - Add your own config file in `zolly/configs/`, you can modify from `zolly/configs/zolly_r50.py`. And remember to change the `root` parameter in `zolly/configs/base.py`, where your files should be put.
 
 # 🎓 Citation
@@ -158,6 +166,11 @@ If you find this project useful in your research, please consider cite:
   year={2023}
 }
 ```
+# 😁 Acknowledge
+Emojis are collected from [gist:7360908](https://gist.github.com/rxaviers/7360908#gistcomment-4745876).
+
+Some of the codes are based on [`MMHuman3D`](https://github.com/open-mmlab/mmhuman3d/blob/main/docs/install.md), [`DecoMR`](https://github.com/zengwang430521/DecoMR).
+
 # 📧 Contact
 
 Feel free to contact me for other questions or cooperation: wwj2022@connect.hku.hk
