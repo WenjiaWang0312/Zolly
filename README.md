@@ -28,14 +28,6 @@ The first work aims to solve 3D Human Mesh Reconstruction task in **perspective-
 
 You should install the needed relies as `ffmpeg`, `torch`, `mmcv`, `pytorch3d` following its tutorials.
 
-You can install `pytorch3d` from file if you find any difficulty. 
-E.g. `python3.8 + pytorch-1.13.1 + cuda-11.7 + pytorch3d-0.7.4`
-```bash
-wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch3d/linux-64/pytorch3d-0.7.4-py38_cu117_pyt1131.tar.bz2;
-pip install fvcore;
-pip install iopath;
-conda install --use-local pytorch3d-0.7.4-py38_cu117_pyt1131.tar.bz2;
-```
 
 - It is recommended that you install the stable version of `MMHuman3D`:
 
@@ -44,6 +36,15 @@ wget https://github.com/open-mmlab/mmhuman3d/archive/refs/tags/v0.9.0.tar.gz;
 tar -xvf v0.9.0.tar.gz;
 cd mmhuman3d-0.9.0;
 pip install -e .
+```
+
+You can install `pytorch3d` from file if you find any difficulty. 
+E.g. `python3.8 + pytorch-1.13.1 + cuda-11.7 + pytorch3d-0.7.4`
+```bash
+wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch3d/linux-64/pytorch3d-0.7.4-py38_cu117_pyt1131.tar.bz2;
+pip install fvcore;
+pip install iopath;
+conda install --use-local pytorch3d-0.7.4-py38_cu117_pyt1131.tar.bz2;
 ```
 
 - install this repo
@@ -76,8 +77,10 @@ For other open sourced datasets, please downlad
 - pretrained backbone [onedrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw)
   - `hrnetw48_coco_pose.pth`
   -  `resnet50_coco_pose.pth`
+
 - SMPL skinning weights
- - Please find in [SMPL official link](https://smpl.is.tue.mpg.de/).
+  - Please find in [SMPL official link](https://smpl.is.tue.mpg.de/).
+
 - Others [onedrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw)
   - `smpl_uv_decomr.npz`
   - `mesh_downsampling.npz`
@@ -95,12 +98,14 @@ sh train_bash.sh zolly/configs/zolly_r50.py 8 --work-dir=work_dirs/zolly
 ```bash
 sh test_bash.sh zolly/configs/zolly/zolly_r50.py $num_gpu$ --checkpoint=$your_ckpt$
 ```
-
+## Demo 
+- For Demo and pretrained checkpoint, Please wait for several days.
 <!-- ## 🎮 Demo
 ```bash
 sh demo_bash.sh zolly/configs/zolly/zolly_r50.py $num_gpu$ --checkpoint=$your_ckpt$
 ``` -->
-## 💻Add Your Algorithm
+
+## 💻Add Your Own Algorithm
 - Add your own network in `zolly/models/heads`, and add it to `zolly/models/builder.py`.
 - Add your own trainer in `zolly/models/architectures`, and add it to `zolly/models/architectures/builder.py`.
 - Add your own config file in `zolly/configs/`, you can modify from `zolly/configs/zolly_r50.py`. And remember to change the `root` parameter in `zolly/configs/base.py`, where your files should be put.
