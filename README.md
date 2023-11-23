@@ -11,7 +11,7 @@ The first work aims to solve 3D Human Mesh Reconstruction task in **perspective-
 
 # 🗓️ News:
 
-🎆 2023.Nov.11, training code of Zolly is released.
+🎆 2023.Nov.23, training code of Zolly is released, pretrained zolly weight will come soon.
 
 🎆 2023.Aug.12, Zolly is selected as ICCV2023 oral, [project page](https://wenjiawang0312.github.io/projects/zolly/).
 
@@ -54,7 +54,7 @@ pip install -e .
 
 ## 💾 Dataset Preparation
 
-You can download the files from [onedrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw) here.
+You can download the files from [onedrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw).
 
 This link contains:
 
@@ -70,32 +70,40 @@ This link contains:
     - SPEC-MTP
     - PDHuman
 For other open sourced datasets, please downlad
+
 ## 📁 Required files
-- pretrained backbone
+
+- pretrained backbone [onedrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw)
+  - `hrnetw48_coco_pose.pth`
+  -  `resnet50_coco_pose.pth`
 - SMPL skinning weights
-- Others
+ - Please find in [SMPL official link](https://smpl.is.tue.mpg.de/).
+- Others [onedrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw)
   - `smpl_uv_decomr.npz`
   - `mesh_downsampling.npz`
   - `J_regressor_h36m.npy`
 
 ## 🚅 Train
 ```bash
-sh train_bash.sh configs/zolly/zolly_r50.py $num_gpu$ --work-dir=$your_workdir$
+sh train_bash.sh zolly/configs/zolly_r50.py $num_gpu$ --work-dir=$your_workdir$
 ```
-
+E.g, you can use
+```bash
+sh train_bash.sh zolly/configs/zolly_r50.py 8 --work-dir=work_dirs/zolly
+```
 ## 🚗 Test
 ```bash
-sh test_bash.sh configs/zolly/zolly_r50.py $num_gpu$ --checkpoint=$your_ckpt$
+sh test_bash.sh zolly/configs/zolly/zolly_r50.py $num_gpu$ --checkpoint=$your_ckpt$
 ```
 
-## 🎮 Demo
+<!-- ## 🎮 Demo
 ```bash
-sh demo_bash.sh configs/zolly/zolly_r50.py $num_gpu$ --checkpoint=$your_ckpt$
-```
+sh demo_bash.sh zolly/configs/zolly/zolly_r50.py $num_gpu$ --checkpoint=$your_ckpt$
+``` -->
 ## 💻Add Your Algorithm
 - Add your own network in `zolly/models/heads`, and add it to `zolly/models/builder.py`.
 - Add your own trainer in `zolly/models/architectures`, and add it to `zolly/models/architectures/builder.py`.
-- Add your own config file in `configs/zolly`, you can modify from `configs/zolly/zolly_r50.py`. And remember to change the `root` parameter in `configs/zolly/base.py`.
+- Add your own config file in `zolly/configs/`, you can modify from `zolly/configs/zolly_r50.py`. And remember to change the `root` parameter in `zolly/configs/base.py`, where your files should be put.
 
 # 🎓 Citation
 
