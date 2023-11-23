@@ -85,12 +85,12 @@ def parse_requirements(fname='requirements.txt', with_version=True):
     return packages
 
 
-setup(name="avatar3d",
+setup(name="zolly",
       version="1.0",
       author="wenjiawang",
       author_email="wwj2022@connect.hku.hk",
       description="An awesome avatar reconstruction library.",
-      keywords='3D Avatar',
+      keywords='Zolly',
       url="https://github.com/WenjiaWang0312/Zolly",
       packages=find_packages(exclude=('configs', 'docs', 'scripts',
                                       'extensions'), ),

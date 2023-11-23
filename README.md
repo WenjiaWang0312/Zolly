@@ -11,6 +11,8 @@ The first work aims to solve 3D Human Mesh Reconstruction task in **perspective-
 
 # 🗓️ News:
 
+🎆 2023.Nov.11, training code of Zolly is released.
+
 🎆 2023.Aug.12, Zolly is selected as ICCV2023 oral, [project page](https://wenjiawang0312.github.io/projects/zolly/).
 
 🎆 2023.Aug.7, the dataset link is released. The training code is coming soon.
@@ -28,7 +30,7 @@ You should install the needed relies as `ffmpeg`, `torch`, `mmcv`, `pytorch3d` f
 
 You can install `pytorch3d` from file if you find any difficulty. 
 E.g. `python3.8 + pytorch-1.13.1 + cuda-11.7 + pytorch3d-0.7.4`
-```
+```bash
 wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch3d/linux-64/pytorch3d-0.7.4-py38_cu117_pyt1131.tar.bz2;
 pip install fvcore;
 pip install iopath;
@@ -37,7 +39,7 @@ conda install --use-local pytorch3d-0.7.4-py38_cu117_pyt1131.tar.bz2;
 
 - It is recommended that you install the stable version of `MMHuman3D`:
 
-```
+```bash
 wget https://github.com/open-mmlab/mmhuman3d/archive/refs/tags/v0.9.0.tar.gz;
 tar -xvf v0.9.0.tar.gz;
 cd mmhuman3d-0.9.0;
@@ -45,7 +47,7 @@ pip install -e .
 ```
 
 - install this repo
-```
+```bash
 cd Zolly;
 pip install -e .
 ```
@@ -57,7 +59,7 @@ You can download the files from [onedrive](https://connecthkuhk-my.sharepoint.co
 This link contains:
 
 - 💿 annotations:
- all have ground-truth focal length, translation and smpl parameters. It is easy to load the annotations with `np.load(path)`. We will release training code as soon as possible.
+ all have ground-truth focal length, translation and smpl parameters.
     - HuMMan (train, test_p1, test_p2, test_p3
     - SPEC-MTP (test_p1, test_p2, test_p3)
     - PDHuman (train, test_p1, test_p2, test_p3, test_p4, test_p5)
@@ -67,23 +69,43 @@ This link contains:
     - HuMMan
     - SPEC-MTP
     - PDHuman
+For other open sourced datasets, please downlad
+## 📁 Required files
+- pretrained backbone
+- SMPL skinning weights
+- Others
+  - `smpl_uv_decomr.npz`
+  - `mesh_downsampling.npz`
+  - `J_regressor_h36m.npy`
 
 ## 🚅 Train
+```bash
+sh train_bash.sh configs/zolly/zolly_r50.py $num_gpu$ --work-dir=$your_workdir$
+```
 
-## 📺 Test & Demo
+## 🚗 Test
+```bash
+sh test_bash.sh configs/zolly/zolly_r50.py $num_gpu$ --checkpoint=$your_ckpt$
+```
 
+## 🎮 Demo
+```bash
+sh demo_bash.sh configs/zolly/zolly_r50.py $num_gpu$ --checkpoint=$your_ckpt$
+```
 ## 💻Add Your Algorithm
-
+- Add your own network in `zolly/models/heads`, and add it to `zolly/models/builder.py`.
+- Add your own trainer in `zolly/models/architectures`, and add it to `zolly/models/architectures/builder.py`.
+- Add your own config file in `configs/zolly`, you can modify from `configs/zolly/zolly_r50.py`. And remember to change the `root` parameter in `configs/zolly/base.py`.
 
 # 🎓 Citation
 
 If you find this project useful in your research, please consider cite:
 
 ```
-@article{wang2023zolly,
-  title={Zolly: Zoom Focal Length Correctly for Perspective-Distorted Human Mesh Reconstruction},
+@inproceedings{wangzolly,
+  title={Zolly: Zoom Focal Length Correctly for Perspective-Distorted Human Mesh Reconstruction Supplementary Material},
   author={Wang, Wenjia and Ge, Yongtao and Mei, Haiyi and Cai, Zhongang and Sun, Qingping and Wang, Yanjun and Shen, Chunhua and Yang, Lei and Komura, Taku},
-  journal={arXiv preprint arXiv:2303.13796},
+  booktitle={Proceedings of the IEEE International Conference on Computer Vision (ICCV)},
   year={2023}
 }
 ```
