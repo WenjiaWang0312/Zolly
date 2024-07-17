@@ -15,6 +15,8 @@ class DemoDataset(BaseDataset, metaclass=ABCMeta):
                  dataset_name: str = 'demo',
                  test_mode: bool = True,
                  **kwargs):
+        if not ext.startswith('.'):
+            ext = '.' + ext
         self.image_paths = glob.glob(f'{data_prefix}/*{ext}')
         self.image_paths.sort()
         self.dataset_name = dataset_name

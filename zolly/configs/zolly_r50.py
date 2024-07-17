@@ -4,7 +4,7 @@ from zolly.configs.base import (root, convention, body_model_train,
 _base_ = ['base.py']
 use_adversarial_train = True
 
-checkpoint_config = dict(interval=10, )
+checkpoint_config = dict(interval=20, )
 # evaluate
 evaluation = dict(metric=['pa-mpjpe', 'mpjpe'])
 
@@ -20,7 +20,7 @@ lr_config = dict(policy='Fixed', by_epoch=False)
 runner = dict(type='EpochBasedRunner', max_epochs=200)
 
 log_config = dict(
-    interval=300,
+    interval=200,
     hooks=[dict(type='TextLoggerHook'),
            dict(type='TensorboardLoggerHook')])
 
@@ -64,7 +64,7 @@ model = dict(
         norm_cfg=dict(type='SyncBN', requires_grad=True),
         init_cfg=dict(type='Pretrained',
                       map_location='cpu',
-                      checkpoint=f'{root}/pretrain/resnet50_coco_pose.pth'),
+                      checkpoint=f'{root}/pretrain/coco_pretrain/resnet50_coco_pose.pth'),
     ),
     neck=dict(
         type='DenseFPN',
@@ -122,7 +122,7 @@ model = dict(
 )
 
 data = dict(
-    samples_per_gpu=128,
+    samples_per_gpu=256,
     workers_per_gpu=8,
     train=train_dict_humman,
     test=test_dict,

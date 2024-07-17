@@ -122,8 +122,9 @@ root
   |       ├── spec_mtp.npz
   |       └── spec_mtp_p1.npz
   └── pretrain
-     ├── hrnetw48_coco_pose.pth
-     └── resnet50_coco_pose.pth
+      └── coco_pretrain 
+          ├── hrnetw48_coco_pose.pth
+          └── resnet50_coco_pose.pth
 ```
 </details>
 
@@ -137,16 +138,43 @@ E.g, you can use
 ```bash
 sh train_bash.sh zolly/configs/zolly_r50.py 8 --work-dir=work_dirs/zolly
 ```
+
+To resume training or finetune model:
+```bash
+sh train_bash.sh zolly/configs/zolly_r50.py 8 --work-dir=work_dirs/zolly --resume-from work_dirs/zolly/latest.pth
+```
+
 ## 🚗 Test
 ```bash
-sh test_bash.sh zolly/configs/zolly/zolly_r50.py $num_gpu$ --checkpoint=$your_ckpt$
+sh test_bash.sh zolly/configs/zolly/zolly_r50.py $num_gpu$ --checkpoint=$your_ckpt$ --data-name pw3d
 ```
-## Demo 
-- For Demo and pretrained checkpoint, Please wait for several days.
-<!-- ## 🎮 Demo
+For convenience, you can test the first 100 samples to evaluate your model.
 ```bash
-sh demo_bash.sh zolly/configs/zolly/zolly_r50.py $num_gpu$ --checkpoint=$your_ckpt$
-``` -->
+sh test_bash.sh zolly/configs/zolly/zolly_r50.py $num_gpu$ --checkpoint=$your_ckpt$ --data-name pw3d --num-data 100
+```
+
+## 🎮 Demo images in a folder
+```bash
+sh demo_bash.sh zolly/configs/zolly/zolly_h48.py $num_gpu$ --checkpoint=$your_ckpt$ --image_folder assets/demo_jpg --ext jpg --demo_root demo/
+```
+
+## Pretrained Models:
+
+We have released our H48 model on huggingface:
+https://huggingface.co/WenjiaWang/Zolly_ckpts
+
+You can use `huggingface-cli download WenjiaWang/Zolly_ckpts --repo-type model` to download the model. (Remember to login with you token firstly)
+
+R50 is not ready yet, please wait.
+
+
+- We re-trained our method and update the results for 3DPW:
+
+|  Method | PA-MPJPE| MPJPE | PA-PVE | PVE |
+|----------|----------|----------|----------|----------|
+| Zolly-H48 | 47.88 | 78.21 | 63.55  |  90.82  |
+| Zolly-H48(ft) | 39.09 | 64.44 | 51.49  |  75.78  |
+
 
 ## 💻Add Your Own Algorithm
 - Add your own network in `zolly/models/heads`, and add it to `zolly/models/builder.py`.

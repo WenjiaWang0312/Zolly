@@ -113,8 +113,8 @@ class SmplVisualizer:
         # ty = pred_cam[:, 2]
         if self.full_image:
             transl = data_batch['full_transl'].float()
-            K[:, 0, 0] = data_batch['orig_focal_length']
-            K[:, 1, 1] = data_batch['orig_focal_length']
+            K[:, 0, 0] = data_batch['ori_focal_length']
+            K[:, 1, 1] = data_batch['ori_focal_length']
             K[:, 0, 2] = data_batch['ori_shape'][:, 1] / 2
             K[:, 1, 2] = data_batch['ori_shape'][:, 0] / 2
             cameras = build_cameras(
@@ -224,7 +224,7 @@ class SmplVisualizer:
                     no_grad=True)
         if self.write_f:
             gt_f = data_batch['gt_focal_length']
-            pred_f = data_batch['orig_focal_length']
+            pred_f = data_batch['ori_focal_length']
             gt_z = data_batch['smpl_transl'][:, 2]
             pred_z = data_batch['full_transl'][:, 2]
         if self.stack_images:

@@ -25,6 +25,9 @@ def parse_args():
                         choices=['none', 'pytorch', 'slurm', 'mpi'],
                         default='none',
                         help='job launcher')
+    parser.add_argument('--image_folder', help='image folder', type=str, default='')
+    parser.add_argument('--ext', help='image extension', type=str, default='jpg')
+    parser.add_argument('--demo_root', help='output result file', type=str, default='')
     parser.add_argument('--checkpoint', help='checkpoint file')
     parser.add_argument('--local_rank', type=int, default=0)
     parser.add_argument('--device',
@@ -57,6 +60,10 @@ def main():
         init_dist(args.launcher, **cfg.dist_params)
 
     # build the dataloader
+    if args.image_folder:
+        cfg.data.demo.data_prefix = args.image_folder
+    if args.ext:
+        cfg.data.demo.ext = args.ext
     dataset = build_dataset(cfg.data.demo)
     # the extra round_up data will be removed during gpu/cpu collect
     data_loader = build_dataloader(dataset,
@@ -65,7 +72,9 @@ def main():
                                    dist=distributed,
                                    shuffle=False,
                                    round_up=False)
-
+    if args.demo_root:
+        os.makedirs(args.demo_root, exist_ok=True)
+        cfg.model.visualizer.demo_root = args.demo_root
     # build the model and load checkpoint
     model = build_architecture(cfg.model)
     model.demo = True

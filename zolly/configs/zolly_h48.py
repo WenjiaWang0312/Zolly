@@ -106,7 +106,7 @@ model = dict(
     use_d_weight=True,
     test_joints3d=True,
     convention_pred=convention_pred,
-    mesh_sampler=dict(filename=f'{root}/mmhuman_data/mesh_downsampling.npz'),
+    mesh_sampler=dict(filename=f'{root}/body_models/smpl/mesh_downsampling.npz'),
     uv_renderer=uv_renderer,
     depth_renderer=depth_renderer,
     visualizer=visualizer,
@@ -119,7 +119,7 @@ model = dict(
         init_cfg=dict(
             type='Pretrained',
             map_location='cpu',
-            checkpoint=f'{root}/mmhuman_data/hrnetw48_coco_pose.pth')),
+            checkpoint=f'{root}/pretrain/coco_pretrain/hrnetw48_coco_pose.pth')),
     head_keys=['warped_d_img', 'vertex_uv'],
     neck=dict(
         type='Conv1x1',

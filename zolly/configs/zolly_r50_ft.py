@@ -17,7 +17,7 @@ optimizer = dict(
 optimizer_config = dict(grad_clip=None)
 # learning policy
 lr_config = dict(policy='Fixed', by_epoch=False)
-runner = dict(type='EpochBasedRunner', max_epochs=190)
+runner = dict(type='EpochBasedRunner', max_epochs=202)
 
 log_config = dict(
     interval=20,
@@ -52,7 +52,7 @@ model = dict(
     use_d_weight=False,
     test_joints3d=True,
     convention_pred=convention_pred,
-    mesh_sampler=dict(filename=f'{root}/mmhuman_data/mesh_downsampling.npz'),
+    mesh_sampler=dict(filename=f'{root}/body_models/smpl/mesh_downsampling.npz'),
     uv_renderer=uv_renderer,
     depth_renderer=depth_renderer,
     visulizer=visualizer,
@@ -62,10 +62,6 @@ model = dict(
         out_indices=[0, 1, 2, 3],
         norm_eval=False,
         norm_cfg=dict(type='SyncBN', requires_grad=True),
-        init_cfg=dict(
-            type='Pretrained',
-            map_location='cpu',
-            checkpoint=f'{root}/mmhuman_data/resnet50_coco_pose.pth'),
     ),
     neck=dict(
         type='DenseFPN',

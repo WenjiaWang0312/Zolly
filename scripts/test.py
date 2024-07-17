@@ -83,8 +83,6 @@ def main():
     # set cudnn_benchmark
     if cfg.get('cudnn_benchmark', False):
         torch.backends.cudnn.benchmark = True
-    cfg.data.test = cfg.data.test[0] if isinstance(cfg.data.test,
-                                                   list) else cfg.data.test
 
     # init distributed env first, since logger depends on the dist info.
     if args.launcher == 'none':

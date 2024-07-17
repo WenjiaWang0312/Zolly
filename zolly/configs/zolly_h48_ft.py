@@ -19,10 +19,10 @@ optimizer = dict(
 optimizer_config = dict(grad_clip=None)
 # learning policy
 lr_config = dict(policy='Fixed', by_epoch=False)
-runner = dict(type='EpochBasedRunner', max_epochs=170)
+runner = dict(type='EpochBasedRunner', max_epochs=212)
 
 log_config = dict(
-    interval=200,
+    interval=20,
     hooks=[dict(type='TextLoggerHook'),
            dict(type='TensorboardLoggerHook')])
 
@@ -94,7 +94,7 @@ model = dict(
     use_d_weight=False,
     test_joints3d=True,
     convention_pred=convention_pred,
-    mesh_sampler=dict(filename=f'{root}/mmhuman_data/mesh_downsampling.npz'),
+    mesh_sampler=dict(filename=f'{root}/body_models/smpl/mesh_downsampling.npz'),
     uv_renderer=uv_renderer,
     depth_renderer=depth_renderer,
     backbone=dict(
@@ -103,10 +103,7 @@ model = dict(
         num_joints=24,
         norm_cfg=dict(type='SyncBN', requires_grad=True),
         out_indices=[0, 1, 2, 3],
-        init_cfg=dict(
-            type='Pretrained',
-            map_location='cpu',
-            checkpoint=f'{root}/mmhuman_data/hrnetw48_coco_pose.pth')),
+        ),
     head_keys=['warped_d_img', 'vertex_uv'],
     neck=dict(
         type='Conv1x1',
@@ -162,6 +159,6 @@ model = dict(
 
 data = dict(samples_per_gpu=128,
             workers_per_gpu=8,
-            train=train_dict_humman,
+            train=pw3d_train_transl,
             test=test_dict,
             demo=demo_real)
