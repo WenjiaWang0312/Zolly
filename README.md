@@ -159,7 +159,9 @@ sh test_bash.sh zolly/configs/zolly/zolly_r50.py $num_gpu$ --checkpoint=$your_ck
 sh demo_bash.sh zolly/configs/zolly/zolly_h48.py $num_gpu$ --checkpoint=$your_ckpt$ --image_folder assets/demo_jpg --ext jpg --demo_root demo/
 ```
 The output name will be like `56_789-0.00_586-1.91_pred.png`, which represent `{raw_name}_{gt_f}-{gt_z}_{pred_f}-{pred_z}_pred.png`
-[im](demo.jpg)
+
+<img src="assets/demo.jpg" alt="Description" style="width: 50%;">
+
 
 ## Pretrained Models:
 
