@@ -160,7 +160,7 @@ sh demo_bash.sh zolly/configs/zolly/zolly_h48.py $num_gpu$ --checkpoint=$your_ck
 ```
 The output name will be like `56_789-0.00_586-1.91_pred.png`, which represent `{raw_name}_{gt_f}-{gt_z}_{pred_f}-{pred_z}_pred.png`
 
-<img src="assets/demo2.jpg" alt="Description" style="width: 40%;"> <img src="assets/demo.jpg" alt="Description" style="width: 43.4%;">
+<img src="assets/demo2.jpg" alt="Description" style="width: 39.5%;"> <img src="assets/demo.jpg" alt="Description" style="width: 43%;">
 
 
 ## Pretrained Models:
