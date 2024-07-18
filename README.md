@@ -168,7 +168,7 @@ The output name will be like `56_789-0.00_586-1.91_pred.png`, which represent `{
 We have released our H48 model on huggingface:
 https://huggingface.co/WenjiaWang/Zolly_ckpts
 
-You can use `huggingface-cli download WenjiaWang/Zolly_ckpts --repo-type model` to download the model. (Remember to login with you token firstly)
+You can use `huggingface-cli download WenjiaWang/Zolly_ckpts --local-dir ckpts --repo-type model` to download the model. (Remember to login with you token firstly)
 
 R50 is not ready yet, please wait.
 
