@@ -4,7 +4,7 @@ from zolly.configs.base import (root, convention, body_model_train,
 _base_ = ['base.py']
 use_adversarial_train = True
 
-checkpoint_config = dict(interval=2, )
+checkpoint_config = dict(interval=1, )
 # evaluate
 evaluation = dict(metric=['pa-mpjpe', 'mpjpe'])
 
@@ -17,7 +17,7 @@ optimizer = dict(
 optimizer_config = dict(grad_clip=None)
 # learning policy
 lr_config = dict(policy='Fixed', by_epoch=False)
-runner = dict(type='EpochBasedRunner', max_epochs=202)
+runner = dict(type='EpochBasedRunner', max_epochs=44)
 
 log_config = dict(
     interval=20,
@@ -55,7 +55,7 @@ model = dict(
     mesh_sampler=dict(filename=f'{root}/body_models/smpl/mesh_downsampling.npz'),
     uv_renderer=uv_renderer,
     depth_renderer=depth_renderer,
-    visulizer=visualizer,
+    visualizer=visualizer,
     backbone=dict(
         type='ResNet',
         depth=50,

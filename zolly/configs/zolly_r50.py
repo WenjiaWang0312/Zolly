@@ -14,10 +14,17 @@ optimizer = dict(
     verts_head=dict(type='Adam', lr=2e-4, betas=(0.9, 0.999), weight_decay=0),
     iuvd_head=dict(type='Adam', lr=2e-4, betas=(0.9, 0.999), weight_decay=0),
 )
+# optimizer = dict(
+#     backbone=dict(type='Adam', lr=2e-4, weight_decay=0),
+#     neck=dict(type='Adam', lr=2e-4, weight_decay=0),
+#     verts_head=dict(type='Adam', lr=2e-4, weight_decay=0),
+#     iuvd_head=dict(type='Adam', lr=2e-4, weight_decay=0),
+# )
 optimizer_config = dict(grad_clip=None)
 # learning policy
-lr_config = dict(policy='Fixed', by_epoch=False)
-runner = dict(type='EpochBasedRunner', max_epochs=200)
+lr_config = dict(policy='step', step=[40])
+# lr_config = dict(policy='Fixed', by_epoch=False)
+runner = dict(type='EpochBasedRunner', max_epochs=280)
 
 log_config = dict(
     interval=200,
@@ -122,7 +129,7 @@ model = dict(
 )
 
 data = dict(
-    samples_per_gpu=256,
+    samples_per_gpu=128,
     workers_per_gpu=8,
     train=train_dict_humman,
     test=test_dict,

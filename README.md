@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>Zolly: Zoom Focal Length Correctly for Perspective-Distorted Human Mesh Reconstruction </h1>
+<h1>[ICCV2023-oral] Zolly: Zoom Focal Length Correctly for Perspective-Distorted Human Mesh Reconstruction </h1>
 </div>
 
 
@@ -174,9 +174,12 @@ R50 is not ready yet, please wait.
 
 
 - We re-trained our method and update the results for 3DPW:
+All better than original paper!
 
 |  Method | PA-MPJPE| MPJPE | PA-PVE | PVE |
 |----------|----------|----------|----------|----------|
+| Zolly-R50 | 48.92 | 79.18 | 65.33 |  92.82  |
+| Zolly-R50 (ft) | 43.70 | 71.33 | 58.07 |  84.41  |
 | Zolly-H48 | 47.88 | 78.21 | 63.55  |  90.82  |
 | Zolly-H48(ft) | 39.09 | 64.44 | 51.49  |  75.78  |
 
