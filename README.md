@@ -10,7 +10,7 @@ The first work aims to solve 3D Human Mesh Reconstruction task in **perspective-
 
 
 # 🗓️ News:
-🎆 2024.Jul.18, pretrained H48 model is released: https://huggingface.co/WenjiaWang/Zolly_ckpts
+🎆 2024.Jul.18, pretrained model is released: https://huggingface.co/WenjiaWang/Zolly_ckpts, all surpoass the results in paper.
 
 🎆 2023.Nov.23, training code of Zolly is released, pretrained zolly weight will come soon.
 
