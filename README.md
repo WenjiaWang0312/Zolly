@@ -10,7 +10,7 @@ The first work aims to solve 3D Human Mesh Reconstruction task in **perspective-
 
 
 # 🗓️ News:
-🎆 2024.Jul.18, pretrained model is released: https://huggingface.co/WenjiaWang/Zolly_ckpts, all surpoass the results in paper.
+🎆 2024.Jul.18, pretrained model is released: https://huggingface.co/WenjiaWang/Zolly_ckpts, all surpass the results in paper.
 
 🎆 2023.Nov.23, training code of Zolly is released, pretrained zolly weight will come soon.
 
@@ -56,7 +56,7 @@ pip install -e .
 
 ## 📁 Required Data and Files
 
-You can download the files from [onedrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw).
+You can download the files from [onedrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw) or [huggingface](https://huggingface.co/datasets/WenjiaWang/PDHuman) by command `huggingface-cli download WenjiaWang/PDHuman --local-dir PDHuman --repo-type dataset`.
 
 This link contains:
 
