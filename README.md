@@ -56,22 +56,22 @@ pip install -e .
 
 ## 📁 Required Data and Files
 
-You can download the files from [onedrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw) or [huggingface](https://huggingface.co/datasets/WenjiaWang/PDHuman) by command `huggingface-cli download WenjiaWang/PDHuman --local-dir PDHuman --repo-type dataset`.
+You can download the files from [onedrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw); or from [huggingface](https://huggingface.co/datasets/WenjiaWang/Zolly_release) by command `huggingface-cli download WenjiaWang/Zolly_release --local-dir Zolly_release --repo-type dataset`.
 
 This link contains:
 
 - Dataset annotations:
  all have ground-truth focal length, translation and smpl parameters.
-  - HuMMan (train, test_p1, test_p2, test_p3)
-  - SPEC-MTP (test_p1, test_p2, test_p3)
-  - PDHuman (train, test_p1, test_p2, test_p3, test_p4, test_p5)
-  - 3DPW (train(has optimized neutral betas), test_p1, test_p2, test_p3)
+  - HuMMan (train, test_p1(full), test_p2, test_p3)
+  - SPEC-MTP (test_p1(full), test_p2, test_p3)
+  - PDHuman (train, test_p1(full), test_p2, test_p3, test_p4, test_p5)
+  - 3DPW (train(has optimized neutral betas), test_p1(full), test_p2, test_p3)
 
 - Dataset images.
   - HuMMan
   - SPEC-MTP
   - PDHuman
-  - For other open sourced datasets, please downlad from their origin website.
+  - For other open sourced datasets, please downlad from their original website.
 
 - Pretrained backbone
   - `hrnetw48_coco_pose.pth`
