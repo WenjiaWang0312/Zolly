@@ -170,19 +170,35 @@ https://huggingface.co/WenjiaWang/Zolly_ckpts
 
 You can use `huggingface-cli download WenjiaWang/Zolly_ckpts --local-dir ckpts --repo-type model` to download the model. (Remember to login with you token firstly)
 
-R50 is not ready yet, please wait.
+
+- We re-trained our method and updated the results for 3DPW, HuMMan, Pdhuman and Spec-MTP:
 
 
-- We re-trained our method and update the results for 3DPW:
-All better than original paper!
+###  3DPW: mostly better than original paper!
+|  Method | PA-MPJPE| MPJPE | PVE |
+|----------|----------|----------|----------|
+| Zolly-R50 | 48.92👍 | 79.18👍 |  92.82  |
+| Zolly-R50 (ft) | 43.70👍 | 71.33👍  |  84.41  |
+| Zolly-H48 | 47.88👍 | 78.21   |  90.82  |
+| Zolly-H48(ft) | 39.09👍 | 64.44👍  |  75.78👍  |
 
-|  Method | PA-MPJPE| MPJPE | PA-PVE | PVE |
-|----------|----------|----------|----------|----------|
-| Zolly-R50 | 48.92 | 79.18 | 65.33 |  92.82  |
-| Zolly-R50 (ft) | 43.70 | 71.33 | 58.07 |  84.41  |
-| Zolly-H48 | 47.88 | 78.21 | 63.55  |  90.82  |
-| Zolly-H48(ft) | 39.09 | 64.44 | 51.49  |  75.78  |
+### SPEC-MTP (p3): comparable to the original paper version
+|  Method | PA-MPJPE| MPJPE  | PVE |
+|----------|----------|----------|----------|
+| Zolly-R50 |  75.34  | 126.66   | 140.69  |
+| Zolly-H48 | 67.47 | 115.74 |   127.96  |
 
+### HuMMan (p3): comparable to the original paper version
+|  Method | PA-MPJPE| MPJPE |  PVE |
+|----------|----------|---------|----------|
+| Zolly-R50 | 24.57   | 35.88👍     | 43.49👍   |
+| Zolly-H48 |   22.94 | 33.39        | 37.93👍   |
+
+### PDHuman (p5): mostly better than original paper!
+|  Method | PA-MPJPE| MPJPE | PVE |
+|----------|----------|----------|----------|
+| Zolly-R50 |  56.75  | 79.83👍      |  91.93👍  |
+| Zolly-H48 |  46.53👍  | 67.86👍    |  77.77👍  |
 
 ## 💻Add Your Own Algorithm
 - Add your own network in `zolly/models/heads`, and add it to `zolly/models/builder.py`.
