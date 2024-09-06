@@ -10,9 +10,9 @@ The first work aims to solve 3D Human Mesh Reconstruction task in **perspective-
 
 
 # 🗓️ News:
-🎆 2024.Jul.18, pretrained model is released: https://huggingface.co/WenjiaWang/Zolly_ckpts, most are better than the results in paper.
+🎆 2024.Jul.18, pretrained models are released: https://huggingface.co/WenjiaWang/Zolly_ckpts, most are better than the results in paper.
 
-🎆 2023.Nov.23, training code of Zolly is released, pretrained zolly weight will come soon.
+🎆 2023.Nov.23, the training code of Zolly is released, pretrained Zolly weight will come soon.
 
 🎆 2023.Aug.12, Zolly is selected as ICCV2023 oral, [project page](https://wenjiawang0312.github.io/projects/zolly/).
 
